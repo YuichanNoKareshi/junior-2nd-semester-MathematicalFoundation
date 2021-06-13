@@ -5,14 +5,14 @@ import matplotlib.pyplot as plt
 
 def do3_1():
     img_src = mpimg.imread("lena.jpg")
-    print(img_src.shape)
+    print("shape\n", img_src.shape)
 
     img = img_src.reshape(256, 256 * 3)
     global U, Sigma, VT
     U, Sigma, VT = np.linalg.svd(img)
-    print(U)
-    print(Sigma)
-    print(VT)
+    print("U\n", U)
+    print("Sigma\n", Sigma)
+    print("VT\n", VT, '\n')
 
 
 def reconstruct(k):
@@ -42,4 +42,4 @@ def do3_2():
 
 
 def do3_3():
-    print(Sigma)
+    print("Sigma\n", Sigma, '\n')

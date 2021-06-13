@@ -44,7 +44,7 @@ def ex2_3():
     bias = []
 
     for i in range(0, 99):
-        bias.append(abs(My[i] - k2y[i]) / ((abs(My[i] + k2y[i]) / 2)))
+        bias.append(abs(My[i] - k2y[i]) / (abs(My[i] + k2y[i]) / 2))
 
     return My, k2y, bias, h2M
 
@@ -52,14 +52,14 @@ def ex2_3():
 def do2_3():
     global My, h2M
     My, k2y, bias, h2M = ex2_3()
-    print(bias)
+    print("bias\n", bias, '\n')
 
 
 def do2_4():
     My = np.array(h2M)
     w, v = LA.eig(My)
-    print(w)
-    print(v)
+    print("w\n", w)
+    print("v\n", v, '\n')
 
 
 

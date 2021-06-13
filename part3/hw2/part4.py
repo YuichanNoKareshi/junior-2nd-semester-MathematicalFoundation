@@ -14,11 +14,13 @@ def plot_px():
     x = np.linspace(0, 1, 100)
     fig, ax = plt.subplots()
     ax.plot(x, f(x), label='px')
+    plt.grid(True)
     plt.show()
 
 
 def do4_1():
     plot_px()
+
 
 def Newton(x0):
     flag = 1
@@ -35,7 +37,7 @@ def Newton(x0):
 
 def do4_2():
     root = Newton(0.45)
-    print(root)
+    print("Newton\n", root)
 
 
 def Secant(x_1, x0):
@@ -67,7 +69,7 @@ def Secant(x_1, x0):
 
 
 def do4_3():
-    root = Secant(0, 0.17)
-    print(root)
-    print(f(0))
-    print(f(0.17))
+    root = Secant(0, 0.18)
+    print("Secant\n", root)
+    print("x=0\n", f(0))
+    print("x=0.18\n", f(0.18))
